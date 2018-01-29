@@ -20,6 +20,28 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\jquery.scrollorama.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\map.js" />
+    <None Include="wwwroot\js\validator.min.js" />
+    <None Include="wwwroot\lib\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\lib\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap-timepicker\bootstrap-timepicker.js" />
+    <None Include="wwwroot\lib\font-awesome-4.6.2\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\lib\gijgo-combined-1.5.0\gijgo.min.js" />
+    <None Include="wwwroot\lib\jquery.inview-master\jquery.inview.min.js" />
+    <None Include="wwwroot\lib\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\lib\owlcarousel\owl.carousel.min.js" />
+    <None Include="wwwroot\lib\simple-line-icons-master\fonts\Simple-Line-Icons.woff2" />
+    <None Include="wwwroot\lib\stellar\jquery.stellar.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\bootstrap-3.3.7-dist\css\dist\css\" />
+    <Folder Include="wwwroot\lib\bootstrap-3.3.7-dist\css\less\mixins\" />
+  </ItemGroup>
+
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

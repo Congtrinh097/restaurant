@@ -14,6 +14,37 @@ namespace Restaurant.Controllers
             return View();
         }
 
+        public IActionResult Admin()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Gallery()
+        {
+            return View();
+        }
+
+        public IActionResult Reservation()
+        {
+            return View();
+        }
+
+
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
         public IActionResult Error()
         {
             ViewData["RequestId"] = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
