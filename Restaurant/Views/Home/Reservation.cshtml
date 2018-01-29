@@ -1,0 +1,101 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_LayoutSinglePage.cshtml";
+} 
+<!-- BEGIN BANNER SECTION -->
+<section class="title-banner">
+    <div class="wrap-tb-bg">
+        <div class="tb-background">
+            <div class="tb-background-bgoverlay"></div>
+            <div class="tb-background-img" style="bottom: 0px">
+                <img src="~/img/reservation-page.jpg" alt="banner">
+            </div>
+        </div>
+    </div>
+    <div class="tb-text">
+        <h1>RESERVATION</h1>
+        <div class="tb-line"></div>
+    </div>
+</section>
+<!-- END BANNER SECTION -->
+<!-- BEGIN CONTENT PAGE -->
+<section class="inner-page-content reservation-page reservation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="well-block">
+                    <div class="well-title">
+                        <div class="heading-section">
+                            <div class="heading-title">Make a Reservation</div>
+                            <div class="heading-text">Please fill this form to make your reservation</div>
+                        </div>
+                    </div>
+                    <div class="form-reservation">
+                        <form>
+                            <!-- Form start -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Persons</label>
+                                        <select id="persons" name="persons" class="form-control">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="phone">Phone</label>
+                                        <input id="phone" name="phone" placeholder="Phone" class="form-control input-md" required="" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="datepicker">Preferred Date</label>
+                                        <input id="datepicker" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="timepicker3">Preferred Time</label>
+                                        <input id="timepicker3" type="text" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="comments">Notes</label>
+                                        <textarea class="form-control" id="comments" name="comments"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group btn-booknow">
+                                        <button id="singlebutton" name="singlebutton" class="rounded-button fadetransition">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- form end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CONTENT PAGE -->
