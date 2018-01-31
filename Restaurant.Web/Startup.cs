@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using Restaurant.Entities;
+using Restaurant.Web.Authentication;
+using Restaurant.Repository;
+using HTActive.Core.Repository;
 
 namespace Restaurant
 {
@@ -23,6 +29,19 @@ namespace Restaurant
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<IAuthorizationHandler, HTAuthorizationHandler>();
+            services.AddScoped(opt =>
+            {
+                var optionBuilder = new DbContextOptionsBuilder<InstanceEntities>();
+                optionBuilder.UseSqlServer(Configuration.GetConnectionString("RESDBConnection"),
+                b => b.MigrationsAssembly("Restaurant.Web"));
+                return optionBuilder.Options;
+            });
+            services.AddScoped<InstanceEntities>();
+            services.AddScoped<InstanceUnitOfWork>();
+            services.AddScoped<InstanceRepository>();
+            services.AddScoped<IBaseUnitOfWork<InstanceEntities>, InstanceUnitOfWork>();
+            RegisterServiceHelper.RegisterRepository(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

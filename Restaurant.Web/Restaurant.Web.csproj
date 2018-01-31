@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="jose-jwt" Version="2.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
@@ -41,6 +42,12 @@
   <ItemGroup>
     <Folder Include="wwwroot\lib\bootstrap-3.3.7-dist\css\dist\css\" />
     <Folder Include="wwwroot\lib\bootstrap-3.3.7-dist\css\less\mixins\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Restaurant.Common\Restaurant.Common.csproj" />
+    <ProjectReference Include="..\Restaurant.Entities\Restaurant.Entities.csproj" />
+    <ProjectReference Include="..\Restaurant.Repository\Restaurant.Repository.csproj" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
