@@ -99,6 +99,15 @@ namespace Restaurant.Repository
 				(_UserRoleRepository = ServiceProvider.GetService<IUserRoleRepository>());
 			}
 		}
+		private IHeaderSliderRepository _HeaderSliderRepository;
+        public IHeaderSliderRepository HeaderSliderRepository 
+		{ 
+			get
+			{
+				return _HeaderSliderRepository ?? 
+				(_HeaderSliderRepository = ServiceProvider.GetService<IHeaderSliderRepository>());
+			}
+		}
 		#endregion
     }
 	
@@ -114,6 +123,7 @@ namespace Restaurant.Repository
 			services.AddScoped<IUserLoginTokenRepository, UserLoginTokenRepository>();
 			services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 			services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+			services.AddScoped<IHeaderSliderRepository, HeaderSliderRepository>();
 		}
     }
 }

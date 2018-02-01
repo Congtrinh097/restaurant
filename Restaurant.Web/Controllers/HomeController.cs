@@ -4,14 +4,21 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Restaurant.Repository;
 
-namespace Restaurant.Controllers
+namespace Restaurant.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        public HomeController(InstanceRepository repository): base(repository)
+        {
+
+        }
         public IActionResult Index()
         {
-            return View();
+            var model = Repository.HeaderSliderRepository.GetAll();
+            
+            return View(model.ToList());
         }
 
         public IActionResult Admin()

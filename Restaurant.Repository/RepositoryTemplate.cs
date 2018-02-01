@@ -106,4 +106,17 @@ namespace Restaurant.Repository
             return model.Id;
         }
 	}
+
+    public partial class HeaderSliderRepository : BaseRepository<HeaderSlider, InstanceEntities>, IHeaderSliderRepository
+    {
+        public HeaderSliderRepository(IBaseUnitOfWork<InstanceEntities> unitOfWork)
+            : base(unitOfWork)
+        {
+
+        }
+		protected override int GetKeyId(HeaderSlider model)
+        {
+            return model.Id;
+        }
+	}
 }

@@ -19,6 +19,7 @@ namespace Restaurant.Entities
         public DbSet<UserLoginToken> UserLoginToken { get; set; }
         public DbSet<UserProfile> UserProfile { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
+        public DbSet<HeaderSlider> HeaderSlider { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

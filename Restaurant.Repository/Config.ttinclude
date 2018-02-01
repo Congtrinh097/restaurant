@@ -9,7 +9,8 @@ var entities = new List<EntityMetadataRender>(){
 	new EntityMetadataRender(){Name = "User"},
 	new EntityMetadataRender(){Name = "UserLoginToken"},
 	new EntityMetadataRender(){Name = "UserProfile"},
-	new EntityMetadataRender(){Name = "UserRole"}
+	new EntityMetadataRender(){Name = "UserRole"},
+	new EntityMetadataRender(){Name = "HeaderSlider"}
 
 };
 #>

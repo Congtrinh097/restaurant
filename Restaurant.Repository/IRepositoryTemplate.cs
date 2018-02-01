@@ -34,4 +34,8 @@ namespace Restaurant.Repository
     public partial interface IUserRoleRepository : IBaseRepository<UserRole>
     {
     }
+
+    public partial interface IHeaderSliderRepository : IBaseRepository<HeaderSlider>
+    {
+    }
 }
