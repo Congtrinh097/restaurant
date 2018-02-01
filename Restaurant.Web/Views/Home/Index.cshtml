@@ -25,7 +25,7 @@
             </div>
             <div class="filter-slider"></div>
             <div class="slide-item">
-                <img src="img/slide5.jpg" alt="slide">
+                <img src="@Model[0]?.ImageUrl" alt="slide">
             </div>
         </div>
         <!-- end slide item -->
@@ -35,10 +35,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="slide-caption">
-                            <h2 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutDown">Các món ăn cung đình</h2>
+                            <h2 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutDown">@Model[1]?.Title</h2>
                             <div data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutDown" class="line"></div>
                             <p data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutDown" style="max-width: 500px">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
+                                @Model[1]?.Description
                             </p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="filter-slider"></div>
             <div class="slide-item">
-                <img src="img/slide5.jpg" alt="slide">
+                <img src="@Model[1]?.ImageUrl" alt="slide">
             </div>
         </div>
         <!-- end slide item -->

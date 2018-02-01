@@ -12,9 +12,10 @@ using System;
 namespace Restaurant.Web.Migrations
 {
     [DbContext(typeof(InstanceEntities))]
-    partial class InstanceEntitiesModelSnapshot : ModelSnapshot
+    [Migration("20180201081255_trinh_000003")]
+    partial class trinh_000003
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
