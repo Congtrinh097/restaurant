@@ -44,6 +44,11 @@ namespace Restaurant.Entities
                 .WithOne(x => x.Role)
                 .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<MenuCategory>()
+                .HasMany(x => x.MenuItems)
+                .WithOne(x => x.MenuCategory)
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
+
 
         }
     }
